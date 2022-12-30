@@ -1,0 +1,9 @@
+this
+push()
+pop()
+map()
+filter()
+every()
+apply()
+call()
+bind()

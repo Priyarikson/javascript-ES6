@@ -1,13 +1,20 @@
+JavaScript=>JS,programming language designed to allow the progranmmer to build interactive web applications.
+ECMAScript is a scripting language specification standardized by ECMA International.It was created to standardize JavaScript in an attemt to allow for independent and compatible implementations.ECMAScript6 or ES6
+
 scope
 scope is the region of a computer program where a variable or function is valid.
+
 function scope=> when a function is declared a new scope block is created inside the body of that function.
 variables defined with var
 block scope
+
 parent scope=>global scope
-parent scope is the block of code which the function is defined in .
+parent scope is the block of the section of code that the  function was defined in .
 function scope hoisting
 instantiation??? i dont understand
-
+instance - an example or single occurrence of something.
+instantiation meaning - represent as or by an instance.
+hoist - raise
 hoisting means that the interpreter moves the instantiation of an entity to the top of the scope it was declared in regardless of where in the scope block it is defined....
 
 <script>
@@ -15,12 +22,15 @@ hoisting means that the interpreter moves the instantiation of an entity to the 
         console.log(example);output is 5 
         var example; //its only declaring here but got output brfore..
 </script>
-block scope
+block scope{}
 a pair of curly braces can be placed anywhere in the code to define a new scope block .{}
 variables defined with let and const
 if statements,loops,functions and any other curly brace pairs will have their own block space  .
 this includes floating curly brace pairs not associated with a keyword.(if,for,etc)
+
+variables declared with the keywords let and const have block scope.no variable hoisting 
 temporal dead zone......accessing a variable declared with let before the assignment will throw a runtime error.
+
 declaring variables
 var ECMAScript 6 let , const
 var
@@ -32,6 +42,7 @@ variable scope block scope{}
 variable reassignment
 const
 variable scope block scope{}
+immutable - fixed
 <script>
        //declared and initialized 
        const example = {prop1:'test'}
@@ -71,11 +82,8 @@ variable scope block scope{}
         console.log('notHoisted2 was not able to be changed');
        }
        notHoisted2.push(5);//The push() method appends values to an array.//return The new length property of the object upon which the method was called.
-
-
-
-
-       console.log('notHoisted2 updated. Now is:',notHoisted2);
+        
+        console.log('notHoisted2 updated. Now is:',notHoisted2);
 
     </script>
     const notHoisted2 =>kerword variable
@@ -85,10 +93,50 @@ const
 the array content or object properties can be changed.the contents of an array can be modified with functions push(),pop(),map()and object properties can be added, removed or updated
 
 The pop() method removes the last element from an array and returns that value to the caller. If you call pop() on an empty array, it returns undefined.
+
 Arrow functions or Fat arrow functions =>
 anonymous.
+frquently used in callback chains,promise chains, array methods..in any situation  
 not named and not bound to an identifier.an arrow function is created dynamically and is not given a name like normal functions, can be assigned to a variable for reuse.
+not assigned a 'this' scope...
+//arrow function
+        const fn1 = function(a, b) {return a+b ;};
+        const fn2 = (a, b)=> {return a+b ;};
+       console.log(fn1(3,5),fn2(3,5));
 
+       //single argument arrow function
+        arg1 => {/*code here*/}
+        //non simple identifier function argument
+        (arg1 = 10) => {/*code here*/}
+        //no arguments passed into the function
+        () => {/*code here*/}
+        //multiple line body arrow function
+        (arg1, arg2) => {
+            console.log(`this is arg1: ${arg1}`);
+            console.log(`this is arg2: ${arg2}`);
+            console.log(`this is arg3: ${arg3}`);
+            /*code more here*/
+        }
+        //single line body arrow function
+        (arg1, arg2) => console.log(`this is arg1: ${arg1}`);
+        // with and without return keyword
+        ( num1, num2 ) => { return (num1+num2); };
+        ( num1, num2 ) => num1+num2;
+        
+        // arrow function with a singleline body // see no parenthesis in the front no wrapping
+        ( numArray ) => numArray.filter( n => n>5 ).map( n => n-1 ).every( n=>n<10 );  
+        //  arrow function with a singleline body broken into multiple lines
+        ( numArray ) => (
+            numArray.filter( n => n>5 )
+            .map( n => n-1 )
+            .every( n=>n<10 )
+            );
+            // arrow function with an object literal in the body // returns an object
+            (num1, num2) => ({prop1:num1,prop2:num2});
+this 
+arrow functions are not assigned a this scope. they inherit their parents this scope and can not have a new this scope bound to them.the scope of this can not be changed in an arrow function. 
 
-
-
+Template Literals - new form of string
+(``)
+`${expression}`
+template literals allow you to embed expressions in the string that are evaluated at runtime.

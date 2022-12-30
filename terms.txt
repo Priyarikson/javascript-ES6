@@ -1,0 +1,4 @@
+undefined
+referenced,declared,assigned,reassigned,initialized,defined
+identifier
+object literal
