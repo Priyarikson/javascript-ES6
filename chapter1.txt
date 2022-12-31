@@ -140,3 +140,16 @@ Template Literals - new form of string
 (``)
 `${expression}`
 template literals allow you to embed expressions in the string that are evaluated at runtime.
+ to escape a template literal simply use a backslash(\)character 
+ `\'` === "'"
+ 
+ //tagged template literals
+        //tag functions
+Tags allow you to parse template literals with a function.
+The first argument of a tag function contains an array containing string values.the string values represent the parts of the input string broken at each template expression.
+the remaining arguments are the values of the template expressions in the string ...
+raw
+The special raw property, available on the first argument to the tag function, allows you to access the raw strings as they were entered, without processing escape sequences.
+
+syntactic sugar
+is a syntax that is designed to make expressions easier to read and express.it makes the syntax "sweeter" because code can be expressed concisely.

@@ -108,6 +108,37 @@ console.log('this is line1 \n this is line 2');//new line \n
         }
         const output= `we are learning ${`funny${javascript()}`}`;
         console.log(output);
+        //tagged template literals
+        //tag functions
+const person = "Mike";
+const age = 28;
+
+function myTag(strings, personExp, ageExp) {
+  const str0 = strings[0]; // "That "
+  const str1 = strings[1]; // " is a "
+  const str2 = strings[2]; // "."
+
+  const ageStr = ageExp > 99 ? "centenarian" : "youngster";
+
+  // We can even return a string built using a template literal
+  return `${str0}${personExp}${str1}${ageStr}${str2}`;
+}
+//important
+//lack of ()and whitespace calling tag function....
+const output1 = myTag`That ${person} is a ${age}.`;
+
+console.log(output1);
+// That Mike is a youngster.
+
+//raw property
+function tag(strings) {
+  console.log(strings.raw[0]);
+}
+
+tag`string text line 1 \n string text line 2`;
+// Logs "string text line 1 \n string text line 2" ,
+// including the two characters '\' and 'n'
+//object properties
     </script>
        
 </body>
