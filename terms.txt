@@ -4,3 +4,7 @@ identifier
 object literal
 parse
 object literals
+prototype
+instantiation
+instance
+

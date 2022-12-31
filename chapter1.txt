@@ -153,3 +153,12 @@ The special raw property, available on the first argument to the tag function, a
 
 syntactic sugar
 is a syntax that is designed to make expressions easier to read and express.it makes the syntax "sweeter" because code can be expressed concisely.
+
+
+Classes and Modules
+prototype
+When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype.
+Every object with its methods and properties contains an internal and hidden property known as [[Prototype]]. The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects. It is a method by which an object can inherit the properties and methods of another object. 
+
+instantiation 
+An instantiation pattern in JavaScript is a way to create an object using functions. There are five instantiation patterns: Functional, Functional-shared, Prototypical, Pseudoclassical, and ES6.
