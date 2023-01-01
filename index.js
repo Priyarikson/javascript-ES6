@@ -158,19 +158,62 @@ const [ a, , b, c = 4 ] = data;//skipping the second value of the array.//provid
 console.log( a, b, c );
 
 //classes
-
+//1
 //declaring a class //uppercase V
 class Vehicle {
   //constructor function take in two variables wheels and topSpeed
   constructor( wheels, topSpeed ) {
     //this scope
+    //saving the input variables to two variables in the this scope
     this.wheels = wheels;
     this.topSpeed = topSpeed;
   }
 }
-//instantiate the class with wheels=3 and topSpeed=20 and save into the tricycle variable
+//instantiate the class with wheels=3 and topSpeed=20 and save it into the tricycle variable.
 const tricycle = new Vehicle( 3, 20 );
 console.log( tricycle.wheels, tricycle.topSpeed );
 //we instantiated a new instance of a class with the new keyword..
-//to craeate a 
-  
+//to craeate a new class,simply declare a variable and set it equal to the expression new className().
+//when we instantiate a new class the parameters that are passed into the class call are passed into the constructor function,if one exists.
+//2
+//creating a class with functions
+class House{
+  constructor(address, floors=1){
+    this.address=address;
+    this.floors=floors;
+  }
+  getFloors(){
+    return this.floors;
+  }
+}
+let myHouse=new House('10 huron ave',2);
+console.log(myHouse.getFloors());
+  //3
+  //extending a class
+  //we can create subclasses using the extends keyword.Subclasses inherit properties and methods from the parent class.
+  //a subclass is defined by following the className with the keyword extends and the name of the parent class
+  //subclass declaration
+  //class House{}//parent class
+  //class Mansion extends House{}
+  //classes-subclasses
+//super() is a function that calls the constructor of the parent object.
+class Hous {
+  constructor(address='somewhere'){
+    this.address=address;
+  }
+}
+class Mansion extends Hous{
+  constructor(address,floors){
+    super(address);
+    this.floors=floors;
+  }
+}
+let mansion = new Mansion('10 huron ave',6,'brad');
+console.log(mansion.floors,mansion.address);
+
+//Modules
+//modules are features that allow the programmer to break code into smaller independent parts that can be imported and reused.
+//to prevent code duplication and reduce file size.
+//two new keyword export and import 
+//export n import keywords allow us to make classes and variables publically available when a file is loaded
+//modules can export properties in 2 ways named exports or default exports
